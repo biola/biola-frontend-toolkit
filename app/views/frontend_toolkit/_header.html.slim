@@ -1,0 +1,62 @@
+#header
+  #wrapperBiolaHeader
+    #biolaHeader
+      h2.branding
+        a.logo href="http://www.biola.edu"
+          img> src="http://academics.biola.edu/static/biola/header-slim/images/logo-biola-mark-white.png" alt=""
+          ' Biola
+          span.university University
+
+      #current-user-profile.dropdown
+        a.dropdown-toggle href="#" aria-hidden="true" data-toggle="dropdown"
+          - if @current_user
+            #profile-img style="background-image: url('#{@current_user.photo_url}')"
+          - else
+            i.fa.fa-user
+        ul.dropdown-menu.pull-right role="menu" aria-labelledby="dLabel"
+          - if @current_user
+            li
+              = link_to '#' do
+                i.fa.fa-user>
+                | My Account
+            li
+              = link_to logout_path do
+                i.fa.fa-power-off>
+                | Logout
+          - else
+            li = link_to 'Login', params.merge(login: 'true')
+
+      / - if @current_user
+      /   #global-alerts.dropdown
+      /     a.dropdown-toggle href="#" aria-hidden="true" data-toggle="dropdown"
+      /       i.fa.fa-bell-o
+      /     ul.dropdown-menu.pull-right role="menu" aria-labelledby="dLabel"
+      /       li = link_to 'This is a really important message...', '#'
+      /       li = link_to 'Your last timecard is way overdue.', '#'
+      /       li = link_to 'You are in quite the pickle mister.', '#'
+      /       li = link_to 'Your student bill was due last week Thursday.', '#'
+      /       li = link_to 'You owe us one million dollars, plus a delicious candy bar.', '#'
+
+      #apps-list.dropdown
+        = app_dropdown_link BiolaFrontendToolkit.config.app_links.present? do
+          span.desktop
+            = BiolaFrontendToolkit.config.app_name
+            - if BiolaFrontendToolkit.config.app_version.present?
+              span.version = "v#{BiolaFrontendToolkit.config.app_version}"
+            = show_environment
+            - if BiolaFrontendToolkit.config.app_links.present?
+              i.fa.fa-caret-down<
+          span.mobile
+            - if BiolaFrontendToolkit.config.app_links.present?
+              i.fa.fa-list.app-list-icon
+              i.fa.fa-caret-down
+            - else
+              i.fa.fa-home
+
+        - if BiolaFrontendToolkit.config.app_links.present?
+          ul.dropdown-menu.pull-right role="menu" aria-labelledby="dLabel"
+            - BiolaFrontendToolkit.config.app_links.each do |app|
+              li = app_link app
+            / li.divider
+            / li.text-center = link_to 'More', '#'
+
