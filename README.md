@@ -62,8 +62,19 @@ Create a new file called `/config/initializers/biola_frontend_toolkit.rb`
       config.app_name = Settings.app.name
       config.app_version = Version.current  # optional
       config.relative_root = Settings.app.relative_url_root
+      config.release_phase = Settings.release.phase
     end
+## View Partials
+### frontend_toolkit/head
+Use this partial to include default html head tags and csrf_meta_tags
 
+### frontend_toolkit/header
+Use `frontend_toolkit/header` for content publishers and other employee web apps.
+
+### frontend_toolkit/prerelease_banner
+Use `frontend_toolkit/prerelease_banner` when your app is in the alpha or beta phases. Make sure BiolaFrontendToolkit.config.release_phase is set to `alpha` or `beta`.
+
+    = render 'frontend_toolkit/prerelease_banner', feedback_form_url: Settings.feedback.form_url
 
 ## Contributing
 

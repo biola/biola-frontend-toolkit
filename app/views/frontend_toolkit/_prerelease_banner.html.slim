@@ -1,0 +1,14 @@
+- feedback_form_url ||= nil
+- phase = BiolaFrontendToolkit.config.release_phase
+
+- if ['alpha', 'beta'].include? phase
+  #wrapperPreRelease
+    div id==phase+'Banner' class='pre-release-banner'
+      .container
+        span
+          strong = phase.upcase+':'
+          '
+          - if feedback_form_url
+            | #{BiolaFrontendToolkit.config.release_phase_intro} &mdash; your #{link_to 'feedback', feedback_form_url, target: '_blank' } will help us improve it.
+          - else
+            = BiolaFrontendToolkit.config.release_phase_intro+'.'
