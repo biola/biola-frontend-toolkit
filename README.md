@@ -63,6 +63,10 @@ Create a new file called `/config/initializers/biola_frontend_toolkit.rb`
       config.app_version = Version.current  # optional
       config.relative_root = Settings.app.relative_url_root
       config.release_phase = Settings.release.phase
+
+      # Google Analytics
+      config.ga_account = 'UA-XXXXXXXX-XX'  # leave blank if you want to disable google analytics
+      config.ga_domain = 'biola.edu'
     end
 ## View Partials
 ### frontend_toolkit/head
