@@ -64,10 +64,12 @@ Create a new file called `/config/initializers/biola_frontend_toolkit.rb`
       config.relative_root = Settings.app.relative_url_root
       config.release_phase = Settings.release.phase
 
-      # Google Analytics
-      config.ga_account = 'UA-XXXXXXXX-XX'  # leave blank if you want to disable google analytics
+      # Google Analytics   ## Optional ##
+      config.ga_account = 'UA-XXXXXXXX-XX'
       config.ga_domain = 'biola.edu'
+      config.ga_enabled = true   # defaults to false
     end
+
 ## View Partials
 ### frontend_toolkit/head
 Use this partial to include default html head tags and csrf_meta_tags
