@@ -9,10 +9,12 @@
 
       #current-user-profile.dropdown
         a.dropdown-toggle href="#" aria-hidden="true" data-toggle="dropdown"
-          - if @current_user
+          - if @current_user.try(:photo_url).present?
             #profile-img style="background-image: url('#{@current_user.photo_url}')"
           - else
-            i.fa.fa-user
+            span.fa-stack.fa-lg
+              i.fa.fa-circle.fa-stack-2x
+              i.fa.fa-user.fa-stack-1x.fa-inverse
         ul.dropdown-menu.pull-right role="menu" aria-labelledby="dLabel"
           - if @current_user
             li
