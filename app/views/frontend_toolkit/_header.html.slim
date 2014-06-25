@@ -17,10 +17,8 @@
               i.fa.fa-user.fa-stack-1x.fa-inverse
         ul.dropdown-menu.pull-right role="menu" aria-labelledby="dLabel"
           - if @current_user
-            li
-              = link_to '#' do
-                i.fa.fa-user>
-                | My Account
+            - BiolaFrontendToolkit.config.profile_links.each do |link|
+              li = app_link link
             li
               = link_to logout_path do
                 i.fa.fa-power-off>
@@ -57,8 +55,8 @@
 
         - if BiolaFrontendToolkit.config.app_links.present?
           ul.dropdown-menu.pull-right role="menu" aria-labelledby="dLabel"
-            - BiolaFrontendToolkit.config.app_links.each do |app|
-              li = app_link app
+            - BiolaFrontendToolkit.config.app_links.each do |link|
+              li = app_link link
             / li.divider
             / li.text-center = link_to 'More', '#'
 
