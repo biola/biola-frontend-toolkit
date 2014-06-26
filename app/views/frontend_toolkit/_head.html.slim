@@ -6,3 +6,4 @@ link rel="icon" type="image/png" href="https://media1.biola.edu/biola/img/biola-
 title = yield_or :title, (title || BiolaFrontendToolkit.config.app_name)
 
 = csrf_meta_tags
+= render 'frontend_toolkit/google_analytics'

@@ -75,7 +75,12 @@ Create a new file called `/config/initializers/biola_frontend_toolkit.rb`
         {title: 'My Account', url: [:my_account, :user], icon: 'user'},
       ]
 
+      # Google Analytics   ## Optional ##
+      config.ga_account = 'UA-XXXXXXXX-XX'
+      config.ga_domain = 'biola.edu'
+      config.ga_enabled = true   # defaults to false
     end
+
 ## View Partials
 ### frontend_toolkit/head
 Use this partial to include default html head tags and csrf_meta_tags
