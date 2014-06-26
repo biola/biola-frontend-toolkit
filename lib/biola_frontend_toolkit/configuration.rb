@@ -4,6 +4,7 @@ module BiolaFrontendToolkit
     attr_accessor :app_version
     attr_accessor :relative_root
     attr_accessor :app_links
+    attr_accessor :profile_links
     attr_accessor :release_phase
     attr_accessor :ga_account
     attr_accessor :ga_domain
@@ -14,6 +15,7 @@ module BiolaFrontendToolkit
       @app_version = ''
       @relative_root = '/'
       @app_links = []
+      @profile_links = []
 
       # Google Analytics
       @ga_account = ''

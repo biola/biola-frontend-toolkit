@@ -49,6 +49,15 @@ body { margin: 0; }
 
     &#current-user-profile {
       #profile-img { height: 30px; width: 30px; background-position: center; background-repeat: no-repeat; background-size: cover; border-radius: 20px; display: inline-block; vertical-align: middle; }
+
+      .fa-lg { font-size: 1.1em; }
+      .dropdown-toggle .fa-stack-2x { color: white; }
+      .dropdown-toggle .fa-stack-1x { color: #333; }
+      &.open {
+        .dropdown-toggle .fa-stack-2x { color: #333; }
+        .dropdown-toggle .fa-stack-1x { color: white; }
+      }
+
       .dropdown-menu {
         // Adjust where the little carret points so that it is right under the profile picture
         &::before { right: 19px; }
