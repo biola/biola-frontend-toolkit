@@ -49,7 +49,7 @@ Include the following in `application.js.coffee`. This includes `jquery`, `jquer
 
 #### Other requirements
 
-* `@current_user` - When a user is logged in
+* `current_user` - When a user is logged in
 * `logout_path` - Should return a link to the logout path
 * `/whateverpath?login=true` - Should be caught by ApplicationController and redirect to login page if not already logged in.
 

@@ -1,6 +1,5 @@
-body { margin: 0; }
-#wrapperBiolaHeader { background:#111; width:100%; }
-#biolaHeader { margin:0 auto; padding:0 15px; height: 42px;
+#wrapperGlobalAppHeader { background:#111; width:100%; }
+#globalAppHeader { margin:0 auto; padding:0 15px; height: 42px;
   a { text-decoration:none; color:#FFF; }
 
   .branding { float:left; font-weight:bold; font-size:13px; height:42px; line-height:42px; margin:0; font-family:'proxima-nova', 'avenir next',Helvetica,Arial,sans-serif; text-transform:uppercase; letter-spacing:0.25em;
@@ -69,7 +68,7 @@ body { margin: 0; }
 
 
 @media screen and (max-width:360px) {
-  #biolaHeader {
+  #globalAppHeader {
     #apps-list.dropdown {
       .dropdown-menu { right: -80px;
         &::before { right: 87px; }
@@ -80,7 +79,7 @@ body { margin: 0; }
 }
 
 @media screen and (min-width:549px) {
-  #biolaHeader {
+  #globalAppHeader {
     #apps-list.dropdown {
       .dropdown-toggle {
         .mobile { display:none; }
@@ -93,19 +92,19 @@ body { margin: 0; }
 }
 
 @media screen and (min-width:768px) {
-  #biolaHeader {
+  #globalAppHeader {
     .branding .university { display: inline; }
   }
 }
 
 @media screen and (min-width:768px) {
-  #biolaHeader { width:750px; }
+  #globalAppHeader { width:750px; }
 }
 
 @media screen and (min-width:992px) {
-  #biolaHeader { width:970px; }
+  #globalAppHeader { width:970px; }
 }
 
 @media screen and (min-width:1200px) {
-  #biolaHeader { width:1170px; }
+  #globalAppHeader { width:1170px; }
 }

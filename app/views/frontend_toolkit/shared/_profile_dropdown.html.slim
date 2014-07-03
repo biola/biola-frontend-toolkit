@@ -1,0 +1,10 @@
+ul.dropdown-menu.pull-right role="menu" aria-labelledby="dLabel"
+  - if current_user
+    - BiolaFrontendToolkit.config.profile_links.each do |link|
+      li = app_link link
+    li
+      = link_to logout_path do
+        i.fa.fa-power-off>
+        | Logout
+  - else
+    li = link_to 'Login', params.merge(login: 'true')

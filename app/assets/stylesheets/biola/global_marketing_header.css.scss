@@ -1,0 +1,28 @@
+#wrapperGlobalMarketingHeader { background:#FFF; width:100%; height:46px; border-bottom:solid 2px #CCC; margin:0; }
+#globalMarketingHeader { width:946px; height:44px; margin:0 auto; padding:0 11px; background:url(http://static.biola.edu/botr/biola/header-mini/images/watermark.gif) 66px 0 no-repeat; }
+#globalMarketingHeader .branding { float:left; width:104px; height:30px; }
+#globalMarketingHeader .logo { background:url(http://static.biola.edu/botr/biola/header-mini/images/logo-biola.png) 11px center no-repeat; width:116px; height:44px; display:block; text-indent:-1000px; overflow:hidden; }
+#globalMarketingHeader .navMain { display:block; white-space:nowrap; list-style-type:none; font:bold 11px/1 Arial, sans-serif; letter-spacing:1px; text-transform:uppercase; padding:0; margin:0; overflow:hidden; float:right; }
+#globalMarketingHeader .navMain li { display:block; float:left; margin:0 1px; }
+#globalMarketingHeader .navMain a { text-align:center; display:block; padding:0 13px; margin:11px 0; height:22px; line-height:22px; text-decoration:none; color:#666; white-space:nowrap; }
+#globalMarketingHeader .navMain a:hover { background:#3D434D; color:#FFF; }
+#globalMarketingHeader .navMain a:active { display:block; }
+
+* html #globalMarketingHeader .navMain li { width:1%; }
+
+@media only screen and (max-width:980px) {
+  #globalMarketingHeader { width:720px; }
+  #globalMarketingHeader .navMain a { padding:0 5px; font-size:10px; letter-spacing:0; }
+}
+
+@media only screen and (max-width:767px) {
+  #wrapperGlobalMarketingHeader { height:30px; border-bottom:1px solid #999; }
+  #globalMarketingHeader { width:100%; padding:0; height:30px; background:#FFF url(http://static.biola.edu/botr/biola/header-mini/images/bg_header_m.png) left bottom repeat-x; }
+  #globalMarketingHeader .branding { float:none; margin:0; width:100%; }
+  #globalMarketingHeader .logo { width:100%; height:30px; padding:9px 0; margin:0; font:bold 13px/1 Helvetica,sans-serif; color:#666; text-transform:uppercase; text-indent:0; text-align:center; text-decoration:none; background:transparent !important; }
+  #globalMarketingHeader .navMain { display:none; }
+}
+
+@media (-webkit-min-device-pixel-ratio:1.5), (min-device-pixel-ratio:1.5) {
+  #globalMarketingHeader .logo { background-image:url(http://static.biola.edu/botr/biola/header-mini/images/logo-biola-x2.png); background-size:103px 30px; }
+}
