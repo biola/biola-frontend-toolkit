@@ -4,3 +4,18 @@
 //= require_self
 
 body { margin: 0; }
+
+
+// Customize header dropdown menus. These will still use Bootstrap but will overwrite some of it's default styles.
+.dropdown.custom-dropdown { float: right;
+  .dropdown-toggle { display: block; text-align:center; line-height:42px; padding:0 15px; color:#CCC; cursor:pointer; background:transparent; border:0; outline:0; -webkit-user-select: none; -webkit-appearance:none;
+    i.fa { vertical-align: middle; }
+  }
+  .dropdown-menu { top: 122%; border-radius: 0; min-width: 230px;
+    > li {
+      > a { padding: 10px 20px;
+        i { margin-right: 8px; }
+      }
+    }
+  }
+}

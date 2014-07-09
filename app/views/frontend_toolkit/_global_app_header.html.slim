@@ -6,7 +6,7 @@
         ' Biola
         span.university University
 
-    #current-user-profile.dropdown
+    #current-user-profile.dropdown.custom-dropdown
       a.dropdown-toggle href="#" aria-hidden="true" data-toggle="dropdown"
         - if current_user.try(:photo_url).present?
           #profile-img style="background-image: url('#{current_user.photo_url}')"
@@ -16,7 +16,7 @@
             i.fa.fa-user.fa-stack-1x.fa-inverse
       = render 'frontend_toolkit/shared/profile_dropdown'
 
-    #apps-list.dropdown
+    #apps-list.dropdown.custom-dropdown
       = app_dropdown_link BiolaFrontendToolkit.config.app_links.present? do
         span.desktop
           = BiolaFrontendToolkit.config.app_name
