@@ -1,9 +1,11 @@
 - feedback_form_url ||= nil
 - phase = BiolaFrontendToolkit.config.release_phase
+- styles = ''
+- styles += "background-color: #{background_color};" if defined?(background_color)
 
 - if ['alpha', 'beta'].include? phase
   #wrapperPreRelease
-    div id==phase+'Banner' class='pre-release-banner'
+    div id==phase+'Banner' class='pre-release-banner' style=styles
       .container
         span
           strong = phase.upcase+':'
