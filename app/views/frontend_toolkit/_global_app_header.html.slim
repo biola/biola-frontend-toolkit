@@ -1,0 +1,41 @@
+#wrapperGlobalAppHeader
+  #globalAppHeader
+    h2.branding
+      a.logo href="http://www.biola.edu"
+        img> src="http://academics.biola.edu/static/biola/header-slim/images/logo-biola-mark-white.png" alt=""
+        ' Biola
+        span.university University
+
+    #current-user-profile.dropdown.custom-dropdown
+      a.dropdown-toggle href="#" aria-hidden="true" data-toggle="dropdown"
+        - if current_user.try(:photo_url).present?
+          #profile-img style="background-image: url('#{current_user.photo_url}')"
+        - else
+          span.fa-stack.fa-lg
+            i.fa.fa-circle.fa-stack-2x
+            i.fa.fa-user.fa-stack-1x.fa-inverse
+      = render 'frontend_toolkit/shared/profile_dropdown'
+
+    #apps-list.dropdown.custom-dropdown
+      = app_dropdown_link BiolaFrontendToolkit.config.app_links.present? do
+        span.desktop
+          = BiolaFrontendToolkit.config.app_name
+          - if BiolaFrontendToolkit.config.app_version.present?
+            span.version = "v#{BiolaFrontendToolkit.config.app_version}"
+          = show_environment
+          - if BiolaFrontendToolkit.config.app_links.present?
+            i.fa.fa-caret-down<
+        span.mobile
+          - if BiolaFrontendToolkit.config.app_links.present?
+            i.fa.fa-list.app-list-icon
+            i.fa.fa-caret-down
+          - else
+            i.fa.fa-home
+
+      - if BiolaFrontendToolkit.config.app_links.present?
+        ul.dropdown-menu.pull-right role="menu" aria-labelledby="dLabel"
+          - BiolaFrontendToolkit.config.app_links.each do |link|
+            li = app_link link
+          / li.divider
+          / li.text-center = link_to 'More', '#'
+

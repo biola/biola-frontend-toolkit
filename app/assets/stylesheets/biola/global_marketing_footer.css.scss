@@ -1,0 +1,45 @@
+html { background: #222;  } // This should color the footer in case the window expands past the footer then the color is the same.
+#wrapperBiolaFooter { background:image-url('toolkit/footer-standard/footer_shadow.png') 0 0 repeat-x; background: #222; }
+#siteinfo .org { text-indent:1000%; white-space:nowrap; overflow:hidden; }
+#wrapperBiolaFooter { float:left; width:100%; padding:0 0 20px; }
+#biolaFooter { width:770px; margin:22px auto; overflow:hidden; padding:0; background:image-url('toolkit/footer-standard/rule_dotted_v.gif') 60% top repeat-y; }
+#biolaFooter,#biolaFooter a { color:#CCC; font:normal 12px/1.3 Helvetica,Arial,sans-serif; }
+#navBiolaSupplemental { float:right; width:35%; margin:0; }
+#navBiolaSupplemental ul { list-style-type:none; margin:4px 0; padding:0; }
+#navBiolaSupplemental ul li { float:left; width:50%; margin:0 0 6px; }
+#siteinfo { float:left; width:55%; margin:0; }
+#siteinfo .org { display:block; width:45%; height:40px; float:left; margin:0 0 28px; background:image-url('toolkit/footer-standard/logo-biola-h-white.png') no-repeat 0 0; }
+#siteinfo .adr,#siteinfo .tel,#siteinfoMapLink { float:right; clear:right; width:55%; font-style:normal; line-height:1.6; }
+#siteinfo .adr { padding:4px 0 0 0; }
+#siteinfo .tel { margin:0 0 9px 0; }
+#siteinfoLegal { float:left; clear:left; width:160px; padding:0; text-align:left; margin:-15px 0 0; }
+#siteinfoLegal,#siteinfoLegal a { color:#AAA; font-size:10px; }
+#siteinfoLegal a { display:block; padding:0 0 2px; }
+
+@media(max-width:767px) {
+  #wrapperBiolaFooter { float:none; padding:0; }
+  #biolaFooter { margin:0; padding:20px 0 20px; width:auto; text-align:center; background:transparent; }
+  #biolaFooter,#biolaFooter a { color:#CCC; font-size:10px; }
+  #siteinfo { float:none; width:auto; }
+  #siteinfo .org { display:inline-block; width:200px; height:70px; float:none; margin:0 auto 10px; padding:0; background:image-url('toolkit/footer-standard/logo-biola-v-white.png') no-repeat center top; }
+  #siteinfo .tel,#siteinfo .adr { float:none; width:100%; }
+  #siteinfoLegal { float:none; width:100%; text-align:center; margin:0; }
+  #siteinfoLegal a { display:inline; }
+  #siteinfoContact { margin:0 0 10px; }
+  #navBiolaSupplemental,#siteinfoMapLink { display:none; }
+}
+
+@media(min-width:768px) and (max-width:979px) {
+  #biolaFooter { width:680px; }
+  #biolaFooter,#biolaFooter a { font-size:11px; }
+  #siteinfo .org { background-size:120px 31px; background-position:0 5px; }
+  #siteinfoLegal,#siteinfoLegal a { font-size:9px; }
+}
+
+@media(max-width:767px) and (-webkit-min-device-pixel-ratio:1.5),(min-device-pixel-ratio:1.5) {
+  #siteinfo .org { background-image:image-url('toolkit/footer-standard/logo-biola-v-white-x2.png'); background-size:92px 69px; }
+}
+
+@media(min-width:768px) and (-webkit-min-device-pixel-ratio:1.5),(min-device-pixel-ratio:1.5) {
+  #siteinfo .org { background-image:image-url('toolkit/footer-standard/logo-biola-h-white-x2.png'); background-size:142px 37px; }
+}
