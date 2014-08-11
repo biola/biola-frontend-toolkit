@@ -6,8 +6,9 @@
 body { margin: 0; }
 
 
-// Customize header dropdown menus. These will still use Bootstrap but will overwrite some of it's default styles.
-.dropdown.custom-dropdown { float: right;
+// Customize header dropdown menus. Declare both 'dropdown custom-dropdown' classes on the HTML element.
+//   We will still use the default Bootstrap dropdown but will overwrite some of it's default styles.
+.custom-dropdown { float: right;
   .dropdown-toggle { display: block; text-align:center; line-height:42px; padding:0 15px; color:#CCC; cursor:pointer; background:transparent; border:0; outline:0; -webkit-user-select: none; -webkit-appearance:none;
     i.fa { vertical-align: middle; }
   }
