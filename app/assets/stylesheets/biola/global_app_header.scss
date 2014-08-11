@@ -7,7 +7,7 @@
     .university { display: none; }
   }
 
-  .dropdown.custom-dropdown {
+  .custom-dropdown {
     .dropdown-menu { top: 122%; border-radius: 0; min-width: 230px;
       > li {
         > a { color: inherit;
@@ -64,7 +64,7 @@
 
 @media screen and (max-width:360px) {
   #globalAppHeader {
-    #apps-list.dropdown {
+    #apps-list.custom-dropdown {
       .dropdown-menu { right: -80px;
         &::before { right: 87px; }
         &::after { right: 88px; }
@@ -75,7 +75,7 @@
 
 @media screen and (min-width:549px) {
   #globalAppHeader {
-    #apps-list.dropdown {
+    #apps-list.custom-dropdown {
       .dropdown-toggle {
         .mobile { display:none; }
         .desktop { display: block; }
