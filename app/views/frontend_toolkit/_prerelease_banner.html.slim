@@ -5,12 +5,14 @@
 
 - if ['alpha', 'beta'].include? phase
   #wrapperPreRelease
-    div id==phase+'Banner' class='pre-release-banner' style=styles
+    div id=(phase+'Banner') class='pre-release-banner' style=styles
       .container
         span
           strong = phase.upcase+':'
           '
+          = t('frontend_toolkit.release_phase_intro')
+          '
           - if feedback_form_url
-            | #{BiolaFrontendToolkit.config.release_phase_intro} &mdash; your #{link_to 'feedback', feedback_form_url, target: '_blank' } will help us improve it.
+            = raw t('frontend_toolkit.release_phase_outro', feedback_link: link_to(t('frontend_toolkit.feedback_link_text'), feedback_form_url, target: '_blank'))
           - else
-            = BiolaFrontendToolkit.config.release_phase_intro+'.'
+            = t('frontend_toolkit.release_phase_outro')

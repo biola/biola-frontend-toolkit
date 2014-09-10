@@ -22,16 +22,5 @@ module BiolaFrontendToolkit
       @ga_domain = 'biola.edu'
       @ga_enabled = false
     end
-
-    def release_phase_intro
-      case release_phase
-      when 'alpha'
-        'This is a prototype'
-      when 'beta'
-        'This is a trial service'
-      else
-        ''
-      end
-    end
   end
 end
