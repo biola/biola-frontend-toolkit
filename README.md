@@ -19,7 +19,9 @@ Or install it yourself as:
 #### Dependencies
 
 * bootstrap-sass
+* coffee-rails
 * font-awesome-rails
+* slim
 
 ## Usage
 
