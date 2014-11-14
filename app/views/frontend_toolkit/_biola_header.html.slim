@@ -1,0 +1,40 @@
+/ If you want this header to handle authentication, pass in `enable_auth: true`
+/  when rendering the partial. And make sure that current_user is defined.
+- enable_auth ||= false
+
+#wrapperBiolaHeader
+  #biolaHeader
+    - if enable_auth && current_user
+      #profile_link.dropdown.custom-dropdown
+        a.dropdown-toggle href="#" aria-hidden="true" data-toggle="dropdown"
+          - if current_user.try(:photo_url).present?
+            #profile-img style="background-image: url('#{current_user.photo_url}')"
+          - else
+            span.fa-stack.fa-lg
+              i.fa.fa-circle.fa-stack-2x
+              i.fa.fa-user.fa-stack-1x.fa-inverse
+        - if content_for?(:account_list)
+          ul.dropdown-menu.pull-right role="menu" aria-labelledby="dLabel"
+            = yield(:account_list)
+
+
+    .overflow-container
+      h2.biola-header-branding
+        a.biola-header-logo href="http://www.biola.edu"
+          = image_tag 'logo-biola-mark-white.png'
+          | Biola University
+      p.biola-header-more aria-hidden="true"
+        button +
+      ul.biola-header-nav
+        li = link_to "About", "http://www.biola.edu/about"
+        li = link_to "Academics", "http://www.biola.edu/academics"
+        li = link_to "Admissions", "http://www.biola.edu/admissions"
+        li = link_to "Athletics", "http://www.biola.edu/athletics"
+        li = link_to "News & Events", "http://now.biola.edu/"
+        li = link_to "Resources", "http://www.biola.edu/resources"
+        li = link_to "Offices", "http://www.biola.edu/offices"
+
+      - if enable_auth && !current_user
+        .login-link
+          = link_to 'Login', params.merge(login: 'true')
+          span.hidden-xs< for more results

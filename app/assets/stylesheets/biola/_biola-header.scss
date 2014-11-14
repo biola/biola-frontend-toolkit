@@ -1,0 +1,81 @@
+// This is the new black biola header with the plus icon to drop down the menu bottons.
+//  Optionally supports user authentication option.
+
+#wrapperBiolaHeader { background:#111; width:100%; }
+
+#biolaHeader { margin:0 auto; padding:0 15px; height: 42px;
+  .overflow-container { overflow:hidden; position: relative; height: 42px; }
+  a { text-decoration:none; color:#FFF; font-weight:normal; }
+  p, ul, button { font-family:Helvetica,Arial,sans-serif; }
+
+  .biola-header-branding,
+  .biola-header-nav,
+  .biola-header-more,
+  .login-link { position: absolute; height: 42px; line-height: 42px; margin: 0; padding: 0; @include transition(top 300ms ease-in-out); }
+
+  .biola-header-branding { top: 0px; left: 0; font-size:13px; font-family:'proxima-nova',Helvetica,Arial,sans-serif; text-transform:uppercase; letter-spacing:0.25em;
+    a { font-weight:bold; }
+    img { width:22px; height:22px; vertical-align:top; display:inline-block; margin:0.75em 0.5em 0 0; }
+  }
+
+  .biola-header-nav,
+  .biola-header-more { display:none; }
+
+  .biola-header-more { right: 5px; }
+
+  #profile_link { float: right; height: 42px;
+    a.dropdown-toggle { text-decoration: none; padding: 8px 5px;
+      .fa-stack { width: 25px; height: 25px; line-height: 25px;
+        i.fa-stack-2x { color: #eee; font-size: 25px; }
+        i.fa-stack-1x { color: #777; font-size: 1em; }
+      }
+    }
+    #profile-img { height: 25px; width: 25px; background-size: contain; border-radius: 100px; border: 1px solid #ccc; background-color: white; background-position: center center; }
+    .dropdown-menu { margin-top: -8px;
+      a { color: #333; }
+    }
+  }
+  .login-link { right: 10px; top: 0px; color: #ccc;
+    a { color: white; font-weight: bold; text-decoration: underline; }
+  }
+  &.active {
+    .login-link { top: 40px; }
+  }
+}
+
+
+@media screen and (min-width:768px) {
+  #biolaHeader { width:750px;
+    .biola-header-nav { display:block; list-style:none; padding:0; right: 40px; top:-40px; font-size:14px;
+      &.active { top:0; }
+      li { float:left;
+        a { color:#AAA; display:block; padding:0 10px; }
+        a:hover { color:#FFF; }
+      }
+    }
+
+    .biola-header-more { display: block;
+      button { display:block; text-align:center; line-height:40px; font-weight:bold; font-size:18px; margin:0; padding:0 8px; color:#CCC; cursor:pointer; background:transparent; border:0; outline:0; position:static; -webkit-appearance:none; }
+    }
+
+    .login-link { right: 40px; }
+
+    &.active {
+      .biola-header-branding { top: 40px; }
+    }
+  }
+}
+
+@media screen and (min-width:992px) {
+  #biolaHeader { width:970px;
+    &.active {
+      .biola-header-branding { top: 0px; }
+    }
+  }
+
+}
+
+@media screen and (min-width:1200px) {
+  #biolaHeader { width:1170px;
+  }
+}
