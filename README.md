@@ -40,9 +40,9 @@ Your layout file should look something like this
         = yield
         = javascript_include_tag "application"
 
-Include the following in `application.css.scss`. This will add require statements for `bootstrap` and `font-awesome` automatically.
+Include the following in `application.css.scss`. This will add require statements for `bootstrap` and `font-awesome` automatically. It also includes some biola variables and mixins.
 
-    //= require biola-frontend-toolkit
+    @import "biola-frontend-toolkit";
 
 Include the following in `application.js.coffee`. This includes `jquery`, `jquery_ujs`, and `bootstrap` automatically.
 
