@@ -3,6 +3,7 @@
 
 #wrapperBiolaHeader { background:#111; width:100%; }
 
+
 #biolaHeader { margin:0 auto; padding:0 15px; height: 42px;
   .overflow-container { overflow:hidden; position: relative; height: 42px; }
   a { text-decoration:none; color:#FFF; font-weight:normal; }
@@ -24,13 +25,24 @@
   .biola-header-more { right: 5px; }
 
   #profile_link { float: right; height: 42px;
-    a.dropdown-toggle { text-decoration: none; padding: 8px 5px;
-      .fa-stack { width: 25px; height: 25px; line-height: 25px;
-        i.fa-stack-2x { color: #eee; font-size: 25px; }
+    $profile-img-height: 25px;
+
+    a.dropdown-toggle {
+      display: block;
+      text-decoration: none;
+      text-align: center;
+      padding: 8px 5px;
+      line-height: 42px;
+      color: #CCC;
+      line-height: $profile-img-height; // Fixes positioning error when there is no image
+
+      i.fa { vertical-align: middle; }
+      .fa-stack { width: $profile-img-height; height: $profile-img-height; line-height: $profile-img-height;
+        i.fa-stack-2x { color: #eee; font-size: $profile-img-height; }
         i.fa-stack-1x { color: #777; font-size: 1em; }
       }
     }
-    #profile-img { height: 25px; width: 25px; background-size: contain; border-radius: 100px; border: 1px solid #ccc; background-color: white; background-position: center center; }
+    #profile-img { height: $profile-img-height; width: $profile-img-height; background-size: contain; border-radius: 100px; border: 1px solid #ccc; background-color: white; background-position: center center; }
     .dropdown-menu { margin-top: -8px;
       a { color: #333; }
     }

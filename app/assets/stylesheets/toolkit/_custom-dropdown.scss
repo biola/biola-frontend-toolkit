@@ -1,10 +1,15 @@
 // Customize header dropdown menus. Declare both 'dropdown custom-dropdown' classes on the HTML element.
 //   We will still use the default Bootstrap dropdown but will overwrite some of it's default styles.
-.custom-dropdown { float: right;
-  .dropdown-toggle { display: block; text-align:center; line-height:42px; padding:0 15px; color:#CCC; cursor:pointer; background:transparent; border:0; outline:0; -webkit-user-select: none; -webkit-appearance:none;
-    i.fa { vertical-align: middle; }
-  }
-  .dropdown-menu { top: 122%; border-radius: 0; min-width: 230px;
+.custom-dropdown {
+  display: inline;
+  z-index: 4000; // should be less than 5000 because that is fullscreen redactor
+
+  .dropdown-toggle {}
+  .dropdown-menu {
+    top: 122%;
+    border-radius: 0;
+    min-width: 230px;
+
     > li {
       > a { padding: 10px 20px;
         i { margin-right: 8px; }
