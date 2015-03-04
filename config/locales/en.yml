@@ -3,4 +3,4 @@ en:
     release_phase_intro: This service is in active development
     release_phase_outro: " — your %{feedback_link} will help us improve it."
     feedback_link_text: feedback
-
+    header_login_phrase: for more results
