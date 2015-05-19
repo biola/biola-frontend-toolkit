@@ -1,8 +1,6 @@
 // Customize header dropdown menus. Declare both 'dropdown custom-dropdown' classes on the HTML element.
 //   We will still use the default Bootstrap dropdown but will overwrite some of it's default styles.
 .custom-dropdown {
-  display: inline;
-
   .dropdown-toggle {}
   .dropdown-menu {
     top: 122%;
