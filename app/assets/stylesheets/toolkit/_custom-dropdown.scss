@@ -2,7 +2,6 @@
 //   We will still use the default Bootstrap dropdown but will overwrite some of it's default styles.
 .custom-dropdown {
   display: inline;
-  z-index: 4000; // should be less than 5000 because that is fullscreen redactor
 
   .dropdown-toggle {}
   .dropdown-menu {
