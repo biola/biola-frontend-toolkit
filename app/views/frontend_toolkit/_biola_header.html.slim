@@ -20,19 +20,19 @@
 
     .overflow-container
       h2.biola-header-branding
-        a.biola-header-logo href="http://www.biola.edu"
+        a.biola-header-logo href="https://www.biola.edu"
           = image_tag 'logo-biola-mark-white.png'
           | Biola University
       p.biola-header-more aria-hidden="true"
         button +
       ul.biola-header-nav
-        li = link_to "About", "http://www.biola.edu/about"
-        li = link_to "Academics", "http://www.biola.edu/academics"
-        li = link_to "Admissions", "http://www.biola.edu/admissions"
-        li = link_to "Athletics", "http://www.biola.edu/athletics"
-        li = link_to "News & Events", "http://now.biola.edu/"
-        li = link_to "Resources", "http://www.biola.edu/resources"
-        li = link_to "Offices", "http://www.biola.edu/offices"
+        li = link_to "About", "https://www.biola.edu/about"
+        li = link_to "Undergraduate", "https://www.biola.edu/undergrad"
+        li = link_to "Graduate", "https://www.biola.edu/grad"
+        li = link_to "Online", "https://www.biola.edu/online"
+        li = link_to "Athletics", "http://athletics.biola.edu"
+        li = link_to "News & Events", "https://now.biola.edu/"
+        li = link_to "Directory", "https://www.biola.edu/directory"
 
       - if enable_auth && !current_user
         .login-link
