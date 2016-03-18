@@ -35,6 +35,14 @@ module BiolaFrontend
         end
       end
 
+      # Replaces http:// and https:// with just //
+      def strip_scheme(url)
+        url.to_s.gsub(/\Ahttps?:/, '')
+      end
+
+      def schemeless_image_tag(url)
+        image_tag strip_scheme(url)
+      end
     end
   end
 end

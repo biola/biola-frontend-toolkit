@@ -9,7 +9,7 @@
     #current-user-profile.dropdown.custom-dropdown
       a.dropdown-toggle href="#" aria-hidden="true" data-toggle="dropdown"
         - if current_user.try(:photo_url).present?
-          #profile-img style="background-image: url('#{current_user.photo_url}')"
+          #profile-img style="background-image: url('#{strip_scheme(current_user.photo_url)}')"
         - else
           span.fa-stack.fa-lg
             i.fa.fa-circle.fa-stack-2x
