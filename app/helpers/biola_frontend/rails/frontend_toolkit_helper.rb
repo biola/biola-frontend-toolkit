@@ -40,8 +40,8 @@ module BiolaFrontend
         url.to_s.gsub(/\Ahttps?:/, '')
       end
 
-      def schemeless_image_tag(url)
-        image_tag strip_scheme(url)
+      def schemeless_image_tag(url, options={})
+        image_tag(strip_scheme(url), options)
       end
     end
   end
