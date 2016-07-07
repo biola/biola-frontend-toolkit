@@ -1,5 +1,8 @@
 # CHANGELOG
 
+### 0.5.5
+
+* fix GA javascript error
 
 ### Master (unreleased)
 
