@@ -6,6 +6,7 @@
     })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
     ga('create', '<%= BiolaFrontendToolkit.config.ga_account %>', '<%= BiolaFrontendToolkit.config.ga_domain %>', {'allowLinker': true });
+    ga('require', 'linker');
     ga('linker:autoLink', ['biola.edu','talbot.edu','rosemead.edu','biola.ellucianrecruiter.com']);
     ga('require', 'displayfeatures'); // enable Display Features for re-marketing with AdWords
     ga('send', 'pageview');
