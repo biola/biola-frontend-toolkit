@@ -1,5 +1,10 @@
 # CHANGELOG
 
+
+### 0.5.6
+
+* change 'login' and 'logout' to verb forms
+
 ### 0.5.5
 
 * fix GA javascript error
