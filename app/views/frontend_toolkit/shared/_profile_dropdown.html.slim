@@ -5,6 +5,6 @@ ul.dropdown-menu.pull-right role="menu" aria-labelledby="dLabel"
     li
       = link_to logout_path do
         i.fa.fa-power-off>
-        | Logout
+        | Log Out
   - else
-    li = link_to 'Login', params.merge(login: 'true')
+    li = link_to 'Log In', params.merge(login: 'true')
