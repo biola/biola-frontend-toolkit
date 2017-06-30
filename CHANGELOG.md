@@ -1,5 +1,8 @@
 # CHANGELOG
 
+### 0.6.0
+
+* Replaced current footer with the a better accessible version
 
 ### 0.5.7
 
