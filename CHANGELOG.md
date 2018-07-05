@@ -1,5 +1,9 @@
 # CHANGELOG
 
+### 0.6.1
+
+* Updated the Undergrad, Grad and Online links in frontend_toolkit/biola_header.html.slim partial
+
 ### 0.6.0
 
 * Replaced current footer with the a better accessible version
