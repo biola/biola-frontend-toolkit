@@ -1,5 +1,9 @@
 # CHANGELOG
 
+### 0.6.2
+
+* Updated the Undergrad, Grad and Online links in fapp/views/frontend_toolkit/global_marketing_header.html.slim partial
+
 ### 0.6.1
 
 * Updated the Undergrad, Grad and Online links in frontend_toolkit/biola_header.html.slim partial
