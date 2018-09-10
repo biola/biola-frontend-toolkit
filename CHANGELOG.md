@@ -1,5 +1,9 @@
 # CHANGELOG
 
+### 0.6.3
+
+* Update Request Admission Info link in footer to point to latest admissions contact
+
 ### 0.6.2
 
 * Updated the Undergrad, Grad and Online links in fapp/views/frontend_toolkit/global_marketing_header.html.slim partial
