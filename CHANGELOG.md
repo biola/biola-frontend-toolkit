@@ -1,5 +1,9 @@
 # CHANGELOG
 
+### 0.6.4
+
+* Update Request Admission Info link in footer to point to latest admissions contact again (https://biola.elluciancrmrecruit.com/apply)
+
 ### 0.6.3
 
 * Update Request Admission Info link in footer to point to latest admissions contact
