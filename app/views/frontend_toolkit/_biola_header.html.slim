@@ -36,5 +36,5 @@
 
       - if enable_auth && !current_user
         .login-link
-          = link_to 'Log In', params.merge(login: 'true'), rel: :nofollow
+          = link_to 'Log In', app_safe_params.merge(login: 'true'), rel: :nofollow
           span.hidden-xs< = t('frontend_toolkit.header_login_phrase')

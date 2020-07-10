@@ -43,6 +43,15 @@ module BiolaFrontend
       def schemeless_image_tag(url, options={})
         image_tag(strip_scheme(url), options)
       end
+
+      # Call a `safe_params` helper method in the app to get a list of permitted
+      # parameters (if one exists)
+      # Return the default list otherwise (`action` and `controller`)
+      def app_safe_params
+        return safe_params if self.respond_to?(:safe_params)
+
+        params.permit
+      end
     end
   end
 end

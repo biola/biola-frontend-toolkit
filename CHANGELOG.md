@@ -1,5 +1,10 @@
 # CHANGELOG
 
+### 1.0.0
+
+* Compatible with Rails 5
+* Uses strong params for login URL (requires Rails 4 at a minimum)
+
 ### 0.6.4
 
 * Update Request Admission Info link in footer to point to latest admissions contact again (https://biola.elluciancrmrecruit.com/apply)
