@@ -1,9 +1,21 @@
 # CHANGELOG
 
+### 1.0.2
+
+* Removed coffee script
+
+### 1.0.1
+
+* Update Library link in footer to point to: https://www.biola.edu/library
+
 ### 1.0.0
 
-* Upgrade to ruby 2.4.4
-* Removed coffee script
+* Compatible with Rails 5
+* Uses strong params for login URL (requires Rails 4 at a minimum)
+
+### 0.6.4
+
+* Update Request Admission Info link in footer to point to latest admissions contact again (https://biola.elluciancrmrecruit.com/apply)
 
 ### 0.6.3
 
