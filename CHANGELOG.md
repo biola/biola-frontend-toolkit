@@ -1,5 +1,10 @@
 # CHANGELOG
 
+### 1.0.0
+
+* Upgrade to ruby 2.4.4
+* Removed coffee script
+
 ### 0.6.3
 
 * Update Request Admission Info link in footer to point to latest admissions contact

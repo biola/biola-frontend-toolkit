@@ -1,7 +1,6 @@
 require "biola_frontend_toolkit/version"
 require "biola_frontend_toolkit/engine" if defined?(::Rails)
 require "bootstrap-sass"
-require "coffee-rails"
 require "slim"
 require "font-awesome-rails"
 
