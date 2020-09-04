@@ -19,7 +19,6 @@ Or install it yourself as:
 #### Dependencies
 
 * bootstrap-sass
-* coffee-rails
 * font-awesome-rails
 * slim
 
@@ -44,9 +43,9 @@ Include the following in `application.css.scss`. This will add require statement
 
     @import "biola-frontend-toolkit";
 
-Include the following in `application.js.coffee`. This includes `jquery`, `jquery_ujs`, and `bootstrap` automatically.
+Include the following in `application.js`. This includes `jquery`, `jquery_ujs`, and `bootstrap` automatically.
 
-    #= require biola-frontend-toolkit
+    //= require biola-frontend-toolkit
 
 
 #### Other requirements

@@ -1,14 +1,13 @@
 module BiolaFrontend
   module Rails
     module FrontendToolkitHelper
-
       def show_environment
-        unless ::Rails.env.match(/prod/i)
-          content_tag :span, ::Rails.env, class: 'label label-danger'
-        end
+        return if ::Rails.env.match(/prod/i)
+
+        content_tag :span, ::Rails.env, class: 'label label-danger'
       end
 
-      def yield_or(name, or_content=nil, &block)
+      def yield_or(name, or_content = nil, &block)
         if content_for?(name)
           content_for(name)
         elsif or_content
@@ -21,9 +20,14 @@ module BiolaFrontend
       end
 
       def app_dropdown_link(dropdown, &block)
-        link_options = {'class'=>'dropdown-toggle'}
-        link_options = {'class'=>'dropdown-toggle', 'area-hidden'=>'true', 'data-toggle'=>'dropdown'} if dropdown
-        link_to (dropdown ? '#' : BiolaFrontendToolkit.config.relative_root), link_options do
+        link_options = { 'class' => 'dropdown-toggle' }
+        if dropdown
+          link_options = {
+            'class' => 'dropdown-toggle', 'area-hidden' => 'true', 'data-toggle' => 'dropdown'
+          }
+        end
+        link_path = dropdown ? '#' : BiolaFrontendToolkit.config.relative_root
+        link_to link_path, link_options do
           yield if block_given?
         end
       end
@@ -40,7 +44,7 @@ module BiolaFrontend
         url.to_s.gsub(/\Ahttps?:/, '')
       end
 
-      def schemeless_image_tag(url, options={})
+      def schemeless_image_tag(url, options = {})
         image_tag(strip_scheme(url), options)
       end
 
