@@ -1,5 +1,9 @@
 # CHANGELOG
 
+### 1.0.3
+
+* Update "Giving to Biola" link in footer to use https (https://giving.biola.edu/)
+
 ### 1.0.2
 
 * Removed coffee script
