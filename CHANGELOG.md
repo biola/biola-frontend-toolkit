@@ -1,5 +1,9 @@
 # CHANGELOG
 
+### 1.1.0
+
+* Upgrade font-awesome-rails dependency to ~> 4.7.0.8
+
 ### 1.0.3
 
 * Update "Giving to Biola" link in footer to use https (https://giving.biola.edu/)
