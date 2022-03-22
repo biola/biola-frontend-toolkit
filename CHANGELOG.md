@@ -1,8 +1,12 @@
 # CHANGELOG
 
-### 1.1.0
+### 1.2.0
 
 * Upgrade font-awesome-rails dependency to ~> 4.7.0.8
+
+### 1.1.0
+
+* Upgrade Ruby version to 3.0.1
 
 ### 1.0.3
 
