@@ -1,5 +1,9 @@
 # CHANGELOG
 
+### 2.0.0
+
+* Upgraded to Bootstrap 4
+
 ### 1.2.0
 
 * Upgrade font-awesome-rails dependency to ~> 4.7.0.8
